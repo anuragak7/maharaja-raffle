@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+	height: 100%;
+}
+
+:focus-visible {
+	outline: 2px solid #3b82f6; /* Tailwind blue-500 */
+	outline-offset: 2px;
+}
+
+#toast-root {
+	position: fixed;
+	top: 16px;
+	right: 16px;
+	z-index: 50;
+}
+
+body {
+	background: linear-gradient(135deg, #e0e7ff 0%, #fff 60%, #fbcfe8 100%);
+	font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+	color: #1e293b;
+}

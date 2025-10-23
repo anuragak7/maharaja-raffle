@@ -1,0 +1,24 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model RaffleEntry {
+  id             String   @id @default(cuid())
+  createdAt      DateTime @default(now())
+  firstName      String
+  lastName       String
+  phone          String   @unique
+  location       String
+  marketingOptIn Boolean  @default(false)
+  sourceIp       String?
+  userAgent      String?
+  deletedAt      DateTime?
+
+  @@index([createdAt])
+  @@index([phone])
+}

@@ -1,0 +1,8 @@
+.next
+node_modules
+dist
+out
+*.log
+*.tsbuildinfo
+node_modules
+.next
