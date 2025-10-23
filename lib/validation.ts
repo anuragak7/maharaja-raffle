@@ -18,7 +18,7 @@ export const entrySchema = z.object({
   firstName: nameSchema,
   lastName: nameSchema,
   phone: phoneSchema,
-  location: z.enum(["Hicksville", "Bellerose"], { required_error: "Location is required" }),
+  location: z.enum(["Hicksville", "Bellerose"]),
   marketingOptIn: z.boolean().optional().default(false),
   // captcha removed
 });
