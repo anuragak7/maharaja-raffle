@@ -2,8 +2,9 @@ import { cookies } from 'next/headers';
 
 const ADMIN_COOKIE = 'admin_auth';
 
-export function isAdminAuthed() {
-  return cookies().get(ADMIN_COOKIE)?.value === '1';
+export async function isAdminAuthed() {
+  const cookieStore = await cookies();
+  return cookieStore.get(ADMIN_COOKIE)?.value === '1';
 }
 
 // adminLogin now does nothing; cookie should be set in server action or route handler
