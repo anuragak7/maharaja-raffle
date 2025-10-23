@@ -43,7 +43,7 @@ export async function GET(req: Request) {
     prisma.raffleEntry.count({ where }),
     prisma.raffleEntry.findMany({
       where,
-      orderBy,
+  orderBy: { createdAt: "desc" as const },
       skip: (page - 1) * pageSize,
       take: pageSize,
       select: {
