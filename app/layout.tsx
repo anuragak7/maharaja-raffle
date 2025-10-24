@@ -15,6 +15,16 @@ export default function RootLayout({
       <body className="min-h-screen flex flex-col items-center justify-center text-gray-900 antialiased selection:bg-fuchsia-200 selection:text-emerald-900 relative">
         {/* Overlay for background dimming */}
         <div style={{position: 'fixed', inset: 0, zIndex: 0, background: 'rgba(255,255,255,0.7)'}} aria-hidden="true"></div>
+              {/* Maharaja logo top left */}
+              <div className="fixed top-4 left-4 z-10 flex items-center">
+                <img
+                  src="/maharaja-logo-3.png"
+                  alt="Maharaja Logo"
+                  className="h-20 w-auto drop-shadow-lg select-none"
+                  style={{ maxWidth: '160px' }}
+                  draggable="false"
+                />
+              </div>
         <main className="relative z-10 w-full max-w-6xl p-12 rounded-3xl shadow-2xl bg-white/95 backdrop-blur-2xl mt-12 mb-12 flex flex-col items-center justify-center min-h-[80vh] border-4 border-emerald-200">
           {children}
         </main>
