@@ -1,3 +1,19 @@
+export async function DELETE(req: Request) {
+  if (!isAuthed(req.headers.get('cookie'))) {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+  }
+  try {
+    const { id } = await req.json();
+    if (!id) return NextResponse.json({ error: 'Missing id' }, { status: 400 });
+    await prisma.raffleEntry.update({
+      where: { id },
+      data: { deletedAt: new Date() },
+    });
+    return NextResponse.json({ success: true });
+  } catch (err: any) {
+    return NextResponse.json({ error: err.message || 'Delete failed' }, { status: 500 });
+  }
+}
 import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/prisma';
 
