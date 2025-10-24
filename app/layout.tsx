@@ -11,9 +11,9 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="h-full bg-gradient-to-br from-blue-50 via-white to-pink-100 font-sans">
-      <body className="min-h-screen flex flex-col items-center justify-center text-gray-800 antialiased selection:bg-blue-200 selection:text-blue-900">
-        <main className="w-full max-w-3xl p-4 sm:p-8 rounded-2xl shadow-xl bg-white/80 backdrop-blur-md mt-8 mb-8">
+    <html lang="en" className="h-full bg-gradient-to-br from-fuchsia-200 via-sky-100 to-emerald-200 font-sans text-3xl">
+      <body className="min-h-screen flex flex-col items-center justify-center text-gray-900 antialiased selection:bg-fuchsia-200 selection:text-emerald-900">
+        <main className="w-full max-w-6xl p-12 rounded-3xl shadow-2xl bg-white/95 backdrop-blur-2xl mt-12 mb-12 flex flex-col items-center justify-center min-h-[80vh] border-4 border-emerald-200">
           {children}
         </main>
       </body>
