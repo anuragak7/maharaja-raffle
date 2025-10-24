@@ -105,7 +105,20 @@ export default function HomeClient() {
       )}
       <header className="p-6 flex flex-col items-center">
         <span className="text-5xl font-extrabold leading-tight text-emerald-700 mb-2 text-center">Maharaja Farmers Market</span>
-        <span className="text-5xl font-extrabold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-500 via-yellow-400 to-emerald-500 animate-celebrate text-center mb-2" style={{letterSpacing: '0.05em'}}>
+        <span
+          className="text-5xl font-extrabold leading-tight text-center mb-2"
+          style={{
+            background: 'linear-gradient(90deg, #f472b6 0%, #fbbf24 50%, #34d399 100%)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text',
+            color: 'transparent',
+            letterSpacing: '0.05em',
+            display: 'inline-block',
+            filter: 'drop-shadow(0 2px 16px #fbbf24) drop-shadow(0 1px 8px #34d399)',
+            animation: 'celebrate 2s infinite alternate',
+          }}
+        >
           Raffle Registration
         </span>
         <span className="text-3xl font-bold text-pink-600 animate-bounce text-center mt-2" style={{textShadow: '0 2px 16px #f472b6, 0 1px 8px #fbbf24'}}>
