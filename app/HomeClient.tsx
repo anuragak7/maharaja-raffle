@@ -8,9 +8,9 @@ import Input from "@/components/Input";
 import Button from "@/components/Button";
 import ToastRoot, { toastError, toastSuccess } from "@/components/Toast";
 
-export default function HomeClient() {
   const [loading, setLoading] = useState(false);
   const [csrf, setCsrf] = useState<string>("");
+  const [showGoodLuck, setShowGoodLuck] = useState(false);
   const { register, handleSubmit, formState: { errors }, reset } = useForm<EntryInput>({
     resolver: zodResolver(entrySchema),
   });
@@ -56,6 +56,8 @@ export default function HomeClient() {
 
       toastSuccess("You're in! Good luck 🍀");
       reset();
+      setShowGoodLuck(true);
+      setTimeout(() => setShowGoodLuck(false), 2500);
     } catch (e: any) {
       toastError(e?.message || "Network error");
     } finally {
@@ -64,19 +66,21 @@ export default function HomeClient() {
   };
 
   return (
-    <main className="min-h-dvh flex flex-col">
+    <main className="min-h-dvh flex flex-col relative">
       <ToastRoot />
+      {showGoodLuck && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-gradient-to-br from-fuchsia-200 via-sky-100 to-emerald-200 bg-opacity-95 animate-fade-in-out">
+          <span className="text-7xl font-extrabold text-emerald-600 drop-shadow-lg animate-pulse">GOOD LUCK 🍀</span>
+        </div>
+      )}
       <header className="p-6 text-center">
         <h1 className="text-2xl font-bold">Maharaja Farmers Market — Raffle Registration</h1>
         <p className="text-gray-600">Enter for a chance to win!</p>
       </header>
       <section className="flex-1 p-6">
         <form onSubmit={handleSubmit(onSubmit)} className="mx-auto max-w-md space-y-4" aria-describedby="privacy-note">
-
-
           <Input label="First Name" id="firstName" {...register("firstName", { required: true })} error={errors.firstName?.message} />
           <Input label="Last Name" {...register("lastName", { required: true })} error={errors.lastName?.message} />
-
           <div>
             <label htmlFor="location" className="block text-sm font-medium mb-1">Location</label>
             <select
@@ -94,7 +98,6 @@ export default function HomeClient() {
               <div className="text-red-600 text-xs mt-1">{errors.location.message}</div>
             )}
           </div>
-
           <Input
             label="Phone Number"
             placeholder="(555) 123-4567"
@@ -102,7 +105,6 @@ export default function HomeClient() {
             {...register("phone", { required: true })}
             error={errors.phone?.message}
           />
-
           <div className="flex items-center gap-2 mt-2">
             <input
               id="marketingOptIn"
@@ -112,7 +114,6 @@ export default function HomeClient() {
             />
             <label htmlFor="marketingOptIn" className="text-sm select-none">I agree to be contacted about promotions.</label>
           </div>
-
           <Button type="submit" disabled={loading} aria-busy={loading} aria-live="polite">
             {loading ? "Submitting…" : "Submit"}
           </Button>
