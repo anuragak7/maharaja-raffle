@@ -11,9 +11,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="h-full bg-gradient-to-br from-fuchsia-200 via-sky-100 to-emerald-200 font-sans text-3xl">
-      <body className="min-h-screen flex flex-col items-center justify-center text-gray-900 antialiased selection:bg-fuchsia-200 selection:text-emerald-900">
-        <main className="w-full max-w-6xl p-12 rounded-3xl shadow-2xl bg-white/95 backdrop-blur-2xl mt-12 mb-12 flex flex-col items-center justify-center min-h-[80vh] border-4 border-emerald-200">
+    <html lang="en" className="h-full font-sans text-3xl">
+      <body className="min-h-screen flex flex-col items-center justify-center text-gray-900 antialiased selection:bg-fuchsia-200 selection:text-emerald-900 relative">
+        {/* Overlay for background dimming */}
+        <div style={{position: 'fixed', inset: 0, zIndex: 0, background: 'rgba(255,255,255,0.7)'}} aria-hidden="true"></div>
+        <main className="relative z-10 w-full max-w-6xl p-12 rounded-3xl shadow-2xl bg-white/95 backdrop-blur-2xl mt-12 mb-12 flex flex-col items-center justify-center min-h-[80vh] border-4 border-emerald-200">
           {children}
         </main>
       </body>
