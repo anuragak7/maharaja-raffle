@@ -1,3 +1,34 @@
+/* Admin interface overrides for laptop/PC view */
+.admin-root {
+	font-size: 1.1rem !important;
+	font-weight: 400 !important;
+	color: #22223b !important;
+	box-shadow: 0 2px 24px 0 rgba(16, 18, 129, 0.08);
+	background: #fff !important;
+}
+.admin-root h1, .admin-root h2, .admin-root h3, .admin-root h4, .admin-root h5, .admin-root h6 {
+	font-size: 2rem !important;
+	font-weight: 700 !important;
+	color: #22223b !important;
+}
+.admin-root table, .admin-root th, .admin-root td {
+	font-size: 1rem !important;
+	font-weight: 400 !important;
+	color: #22223b !important;
+}
+.admin-root button, .admin-root input, .admin-root select, .admin-root textarea {
+	font-size: 1rem !important;
+	padding: 0.5rem 1rem !important;
+	border-radius: 0.5rem !important;
+	background: #f8f9fa !important;
+	color: #22223b !important;
+	border: 1px solid #e0e0e0 !important;
+	box-shadow: none !important;
+}
+.admin-root button:hover, .admin-root input:focus, .admin-root select:focus, .admin-root textarea:focus {
+	background: #e9ecef !important;
+	color: #be185d !important;
+}
 /* Force Maharaja logo to top right regardless of parent layout */
 .maharaja-logo-fixed {
 	position: fixed !important;
