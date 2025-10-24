@@ -103,9 +103,12 @@ export default function HomeClient() {
           `}</style>
         </div>
       )}
-      <header className="p-6 text-center">
-        <h1 className="text-2xl font-bold">Maharaja Farmers Market — Raffle Registration</h1>
-        <p className="text-gray-600">Enter for a chance to win!</p>
+      <header className="p-6 flex flex-col items-start">
+        <div className="flex flex-col">
+          <span className="text-4xl font-extrabold leading-tight text-emerald-700">Maharaja Farmers Market</span>
+          <span className="text-4xl font-extrabold leading-tight text-fuchsia-700">Raffle Registration</span>
+        </div>
+        <p className="text-gray-600 mt-2">Enter for a chance to win!</p>
       </header>
       <section className="flex-1 p-6">
         <form onSubmit={handleSubmit(onSubmit)} className="mx-auto max-w-md space-y-4" aria-describedby="privacy-note">
