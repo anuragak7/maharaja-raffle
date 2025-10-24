@@ -70,8 +70,37 @@ export default function HomeClient() {
     <main className="min-h-dvh flex flex-col relative">
       <ToastRoot />
       {showGoodLuck && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-gradient-to-br from-fuchsia-200 via-sky-100 to-emerald-200 bg-opacity-95 animate-fade-in-out">
-          <span className="text-7xl font-extrabold text-emerald-600 drop-shadow-lg animate-pulse">GOOD LUCK 🍀</span>
+        <div
+          style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            width: '100vw',
+            height: '100vh',
+            zIndex: 9999,
+            background: 'linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            transition: 'opacity 0.5s',
+            opacity: 1,
+          }}
+        >
+          <span style={{
+            fontSize: '7rem',
+            fontWeight: 900,
+            color: '#059669',
+            textShadow: '0 4px 32px #a21caf, 0 2px 16px #059669',
+            animation: 'pulse 1.2s infinite',
+          }}>
+            GOOD LUCK 🍀
+          </span>
+          <style>{`
+            @keyframes pulse {
+              0%, 100% { transform: scale(1); }
+              50% { transform: scale(1.08); }
+            }
+          `}</style>
         </div>
       )}
       <header className="p-6 text-center">
