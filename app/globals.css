@@ -20,7 +20,7 @@ html, body {
 
 
 body {
-	background: linear-gradient(120deg, #fbc2eb 0%, #a6c1ee 100%);
+	background: url('/gold-background-with-confetti-streamers_1048-10083.jpg') center center / cover no-repeat fixed;
 	font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
 	color: #1e293b;
 	font-size: 2.25rem; /* 36px, for kiosk readability */
