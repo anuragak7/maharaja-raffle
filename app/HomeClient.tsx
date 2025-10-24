@@ -104,10 +104,8 @@ export default function HomeClient() {
         </div>
       )}
       <header className="p-6 flex flex-col items-start">
-        <div className="flex flex-col">
-          <span className="text-4xl font-extrabold leading-tight text-emerald-700">Maharaja Farmers Market</span>
-          <span className="text-4xl font-extrabold leading-tight text-fuchsia-700">Raffle Registration</span>
-        </div>
+        <span className="text-4xl font-extrabold leading-tight text-emerald-700">Maharaja Farmers Market</span>
+        <span className="text-3xl font-bold leading-tight text-fuchsia-700 mt-1">Raffle Registration</span>
         <p className="text-gray-600 mt-2">Enter for a chance to win!</p>
       </header>
       <section className="flex-1 p-6">
