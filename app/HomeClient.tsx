@@ -8,6 +8,7 @@ import Input from "@/components/Input";
 import Button from "@/components/Button";
 import ToastRoot, { toastError, toastSuccess } from "@/components/Toast";
 
+export default function HomeClient() {
   const [loading, setLoading] = useState(false);
   const [csrf, setCsrf] = useState<string>("");
   const [showGoodLuck, setShowGoodLuck] = useState(false);
