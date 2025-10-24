@@ -16,7 +16,7 @@ export default function RootLayout({
         {/* Overlay for background dimming */}
         <div style={{position: 'fixed', inset: 0, zIndex: 0, background: 'rgba(255,255,255,0.7)'}} aria-hidden="true"></div>
               {/* Maharaja logo top right */}
-              <div className="fixed top-4 right-4 z-10 flex items-center">
+              <div className="maharaja-logo-fixed">
                 <img
                   src="/maharaja-logo-3.png"
                   alt="Maharaja Logo"

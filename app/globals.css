@@ -1,3 +1,13 @@
+/* Force Maharaja logo to top right regardless of parent layout */
+.maharaja-logo-fixed {
+	position: fixed !important;
+	top: 1rem !important;
+	right: 1rem !important;
+	z-index: 100 !important;
+	display: flex !important;
+	align-items: center !important;
+	pointer-events: none;
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
