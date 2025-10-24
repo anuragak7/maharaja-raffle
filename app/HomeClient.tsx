@@ -103,10 +103,23 @@ export default function HomeClient() {
           `}</style>
         </div>
       )}
-      <header className="p-6 flex flex-col items-start">
-        <span className="text-4xl font-extrabold leading-tight text-emerald-700">Maharaja Farmers Market</span>
-        <span className="text-3xl font-bold leading-tight text-fuchsia-700 mt-1">Raffle Registration</span>
-        <p className="text-gray-600 mt-2">Enter for a chance to win!</p>
+      <header className="p-6 flex flex-col items-center">
+        <span className="text-5xl font-extrabold leading-tight text-emerald-700 mb-2 text-center">Maharaja Farmers Market</span>
+        <span className="text-5xl font-extrabold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-500 via-yellow-400 to-emerald-500 animate-celebrate text-center mb-2" style={{letterSpacing: '0.05em'}}>
+          Raffle Registration
+        </span>
+        <span className="text-3xl font-bold text-pink-600 animate-bounce text-center mt-2" style={{textShadow: '0 2px 16px #f472b6, 0 1px 8px #fbbf24'}}>
+          Enter for a chance to win!
+        </span>
+        <style>{`
+          @keyframes celebrate {
+            0%, 100% { filter: hue-rotate(0deg); }
+            50% { filter: hue-rotate(30deg) brightness(1.2); }
+          }
+          .animate-celebrate {
+            animation: celebrate 2s infinite alternate;
+          }
+        `}</style>
       </header>
       <section className="flex-1 p-6">
         <form onSubmit={handleSubmit(onSubmit)} className="mx-auto max-w-md space-y-4" aria-describedby="privacy-note">
