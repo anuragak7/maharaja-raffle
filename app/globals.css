@@ -20,14 +20,18 @@ html, body {
 	z-index: 50;
 }
 
-
 body {
-	background: url('/gold-background-with-confetti-streamers_1048-10083.jpg') center center / cover no-repeat fixed;
 	font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
-	color: #1e293b;
+	color: #111827;
 	font-size: 2.25rem; /* 36px, for kiosk readability */
+	font-weight: bold;
 	line-height: 1.3;
 	box-shadow: 0 0 80px 0 rgba(236, 72, 153, 0.15), 0 0 0 8px #a7f3d0;
+}
+
+h1, h2, h3, h4, h5, h6, label, .font-bold, .font-extrabold, .text-2xl, .text-3xl, .text-4xl, .text-5xl {
+	color: #111827 !important;
+	font-weight: bold !important;
 }
 
 button, input, select, textarea {
