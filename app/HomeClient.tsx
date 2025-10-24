@@ -108,15 +108,10 @@ export default function HomeClient() {
         <span
           className="text-5xl font-extrabold leading-tight text-center mb-2"
           style={{
-            background: 'linear-gradient(90deg, #f472b6 0%, #fbbf24 50%, #34d399 100%)',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-            backgroundClip: 'text',
-            color: 'transparent',
+            color: '#111827',
             letterSpacing: '0.05em',
             display: 'inline-block',
-            filter: 'drop-shadow(0 2px 16px #fbbf24) drop-shadow(0 1px 8px #34d399)',
-            animation: 'celebrate 2s infinite alternate',
+            textShadow: '0 2px 16px #fbbf24, 0 1px 8px #34d399',
           }}
         >
           Raffle Registration
